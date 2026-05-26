@@ -1,10 +1,11 @@
+import Image from 'next/image';
 import { portfolioContent } from '@/lib/portfolio-content';
 
 export function About() {
   const { title, content } = portfolioContent.about;
 
   return (
-    <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0c]">
+    <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#000000]">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl sm:text-5xl font-bold text-[#f3f4f6] mb-16 text-center">
           {title}
@@ -32,15 +33,17 @@ export function About() {
             </div>
           </div>
 
-          <div className="order-1 md:order-2">
-            <div className="bento-card p-12 aspect-square flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-28 h-28 mx-auto mb-6 bg-gradient-to-br from-[#6366F1] to-[#a78bfa] rounded-full flex items-center justify-center shadow-lg" style={{ boxShadow: '0 0 30px rgba(99, 102, 241, 0.4)' }}>
-                  <span className="text-5xl">👨‍💻</span>
-                </div>
-                <p className="text-lg font-bold text-[#f3f4f6] mb-2">Ivan Jerad Manamperi</p>
-                <p className="text-sm text-[#8e8e9f] font-medium">CS @ UOW & IIT Sri Lanka</p>
-              </div>
+          <div className="order-1 md:order-2 flex justify-center">
+            <div className="profile-visual-wrapper">
+              <div className="glow-ring-back"></div>
+              <Image
+                src="/images/ivan-profile.png"
+                alt="Ivan Jerad Manamperi"
+                width={300}
+                height={420}
+                className="profile-portrait"
+                priority
+              />
             </div>
           </div>
         </div>

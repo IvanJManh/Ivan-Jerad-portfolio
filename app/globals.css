@@ -497,4 +497,57 @@ body {
     border-color: rgba(99, 102, 241, 0.4);
     transform: translateY(-2px);
   }
+
+  /* Premium Profile Visual System */
+  .profile-visual-wrapper {
+    position: relative;
+    width: 380px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .glow-ring-back {
+    position: absolute;
+    bottom: 40px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 2px dashed var(--accent-lime);
+    box-shadow: 0 0 30px rgba(40, 167, 69, 0.15),
+                inset 0 0 30px rgba(40, 167, 69, 0.1);
+    z-index: 1;
+    opacity: 0.6;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                opacity 0.4s ease, 
+                box-shadow 0.4s ease;
+  }
+
+  .profile-portrait {
+    position: relative;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .profile-visual-wrapper:hover .glow-ring-back {
+    opacity: 1;
+    box-shadow: 0 0 50px rgba(40, 167, 69, 0.4),
+                inset 0 0 40px rgba(40, 167, 69, 0.2);
+    animation: spinRing 12s linear infinite;
+  }
+
+  @keyframes spinRing {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
