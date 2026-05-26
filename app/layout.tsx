@@ -10,8 +10,8 @@ const _spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"] });
 const _plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Hype Grid - Event Organizer',
-  description: 'Gen-Z Web3 event management dashboard',
+  title: 'Ivan Jerad Manamperi - Product Builder',
+  description: 'Computer Science student building products from concept to deployment. Planning, designing, developing, and refining solutions.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -38,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${_plusJakarta.className} antialiased bg-slate-950 text-white`}>
+    <html lang="en">
+      <body className={`${_plusJakarta.className} antialiased bg-white text-gray-900`}>
         {children}
         <Analytics />
       </body>
