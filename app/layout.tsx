@@ -38,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${_plusJakarta.className} antialiased bg-white text-gray-900`}>
+    <html lang="en" className="dark">
+      <body className={`${_plusJakarta.className} antialiased bg-[#0a0a0c] text-[#f3f4f6]`}>
         {children}
         <Analytics />
       </body>

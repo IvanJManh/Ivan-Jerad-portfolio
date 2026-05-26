@@ -4,24 +4,24 @@ export function Footer() {
   const { copyright, tagline, quickLinks } = portfolioContent.footer;
 
   return (
-    <footer className="bg-[#1A1A1A] text-[#6B7280] py-16 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#0a0a0c] text-[#8e8e9f] py-16 px-4 sm:px-6 lg:px-8 border-t border-[rgba(255,255,255,0.08)]">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand section */}
           <div>
-            <h3 className="text-lg font-bold text-white mb-2">Ivan Jerad</h3>
-            <p className="text-sm text-[#6B7280]">{tagline}</p>
+            <h3 className="text-lg font-bold text-[#f3f4f6] mb-2">Ivan Jerad</h3>
+            <p className="text-sm text-[#8e8e9f]">{tagline}</p>
           </div>
 
           {/* Quick links */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wide">Quick Links</h4>
+            <h4 className="text-sm font-semibold text-[#f3f4f6] mb-4 uppercase tracking-wide">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link, idx) => (
                 <li key={idx}>
                   <a
                     href={link.href}
-                    className="text-sm text-[#6B7280] hover:text-white transition-colors duration-300"
+                    className="text-sm text-[#8e8e9f] hover:text-[#f3f4f6] transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -32,13 +32,13 @@ export function Footer() {
 
           {/* Social links */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wide">Connect</h4>
+            <h4 className="text-sm font-semibold text-[#f3f4f6] mb-4 uppercase tracking-wide">Connect</h4>
             <div className="flex gap-3">
               <a
                 href="https://linkedin.com/in/ivan-manamperi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#2D2E3F] flex items-center justify-center hover:bg-[#1E40AF] transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 rounded-full bg-[rgba(99,102,241,0.1)] flex items-center justify-center hover:bg-[#6366F1] text-[#a78bfa] hover:text-white transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -49,7 +49,7 @@ export function Footer() {
                 href="https://github.com/IvanJManh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#2D2E3F] flex items-center justify-center hover:bg-[#1E40AF] transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 rounded-full bg-[rgba(99,102,241,0.1)] flex items-center justify-center hover:bg-[#6366F1] text-[#a78bfa] hover:text-white transition-all duration-300 hover:scale-110"
                 aria-label="GitHub"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -58,7 +58,7 @@ export function Footer() {
               </a>
               <a
                 href="mailto:ivanjerald00@gmail.com"
-                className="w-10 h-10 rounded-full bg-[#2D2E3F] flex items-center justify-center hover:bg-[#1E40AF] transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 rounded-full bg-[rgba(99,102,241,0.1)] flex items-center justify-center hover:bg-[#6366F1] text-[#a78bfa] hover:text-white transition-all duration-300 hover:scale-110"
                 aria-label="Email"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -70,8 +70,8 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-[#2D2E3F] pt-8 text-center">
-          <p className="text-sm text-[#6B7280]">{copyright}</p>
+        <div className="border-t border-[rgba(255,255,255,0.08)] pt-8 text-center">
+          <p className="text-sm text-[#8e8e9f]">{copyright}</p>
         </div>
       </div>
     </footer>
