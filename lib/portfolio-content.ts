@@ -46,22 +46,34 @@ export const portfolioContent = {
     {
       title: "Micro Skill Builder App",
       category: "AI-Powered Communications Coach",
-      description: `I led the requirement gathering and user flow definition for this AI-powered communications coaching application. I collaboratively planned the AI feedback feature architecture while conducting usability testing to validate the user experience. Using ClickUp for agile coordination, I ensured alignment between the product vision and technical implementation, testing edge cases in the feedback logic to ensure accuracy and usability.`
+      description: `I led the requirement gathering and user flow definition for this AI-powered communications coaching application. I collaboratively planned the AI feedback feature architecture while conducting usability testing to validate the user experience. Using ClickUp for agile coordination, I ensured alignment between the product vision and technical implementation, testing edge cases in the feedback logic to ensure accuracy and usability.`,
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
+      liveUrl: "https://skillbuilder-app.com",
+      githubUrl: "https://github.com/IvanJManh/micro-skill-builder"
     },
     {
       title: "Ceylon Gate Travels",
       category: "Luxury Travel Platform",
-      description: `I designed the platform's UI/UX in Figma, creating user flows for the booking journey and itinerary management modules. I built responsive frontend components in React and HTML/CSS, integrating REST APIs to power real-time availability and pricing. I conducted usability testing on the itinerary interface to refine the user experience and validated the platform across devices before deployment.`
+      description: `I designed the platform's UI/UX in Figma, creating user flows for the booking journey and itinerary management modules. I built responsive frontend components in React and HTML/CSS, integrating REST APIs to power real-time availability and pricing. I conducted usability testing on the itinerary interface to refine the user experience and validated the platform across devices before deployment.`,
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop",
+      liveUrl: "https://ceylongatetravels.com",
+      githubUrl: "https://github.com/IvanJManh/ceylon-gate-travels"
     },
     {
       title: "Solar Web App",
       category: "Energy Monitoring Dashboard",
-      description: `I created detailed user flows and a high-fidelity prototype in Figma, applying HCI principles to ensure clarity in data visualization. I worked closely with developers to translate the design into a functional dashboard, testing the interface for usability and accessibility. I validated that the dashboard effectively communicated energy metrics while maintaining visual hierarchy and user guidance.`
+      description: `I created detailed user flows and a high-fidelity prototype in Figma, applying HCI principles to ensure clarity in data visualization. I worked closely with developers to translate the design into a functional dashboard, testing the interface for usability and accessibility. I validated that the dashboard effectively communicated energy metrics while maintaining visual hierarchy and user guidance.`,
+      image: "https://images.unsplash.com/photo-1563770660-2a53f5d1e965?w=500&h=300&fit=crop",
+      liveUrl: "https://solar-dashboard.app",
+      githubUrl: "https://github.com/IvanJManh/solar-web-app"
     },
     {
       title: "Gem Luster E-Commerce App",
       category: "Gem Vendor Platform",
-      description: `I conducted stakeholder analysis and created comprehensive wireframes and user flows to map the vendor and customer journeys. I developed high-fidelity prototypes in Figma following incremental SDLC principles, testing prototypes with stakeholders to gather feedback. I planned feature prioritization, coordinated across teams using ClickUp, and ensured the final design balanced vendor needs with customer usability.`
+      description: `I conducted stakeholder analysis and created comprehensive wireframes and user flows to map the vendor and customer journeys. I developed high-fidelity prototypes in Figma following incremental SDLC principles, testing prototypes with stakeholders to gather feedback. I planned feature prioritization, coordinated across teams using ClickUp, and ensured the final design balanced vendor needs with customer usability.`,
+      image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=300&fit=crop",
+      liveUrl: "https://gemluster-ecommerce.com",
+      githubUrl: "https://github.com/IvanJManh/gem-luster-app"
     }
   ],
 
