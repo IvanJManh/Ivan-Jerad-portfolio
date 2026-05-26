@@ -5,20 +5,20 @@ export function Projects() {
   const projects = portfolioContent.projects;
 
   return (
-    <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0c]">
+    <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#000000]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-[#f3f4f6] mb-20 text-center">
+        <h2 className="text-4xl sm:text-5xl font-bold text-[#ffffff] mb-20 text-center">
           Projects
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="bento-layout-grid">
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="group bento-card overflow-hidden"
+              className={`bento-card group clickable ${idx === 0 ? 'span-two-columns' : ''}`}
             >
               {/* Project image with desaturation effect */}
-              <div className="relative h-56 bg-[rgba(99,102,241,0.1)] overflow-hidden">
+              <div className="relative h-48 bg-[rgba(40,167,69,0.05)] overflow-hidden mb-6 rounded-lg">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -28,14 +28,15 @@ export function Projects() {
               </div>
 
               {/* Project content */}
-              <div className="p-8">
-                <div className="project-category mb-3">
-                  {project.category}
+              <div className="card-inner-content">
+                <div className="project-header-meta mb-4">
+                  <span className="meta-tag text-[#28A745]">{project.category}</span>
+                  <span className="date-tag text-[#8e8e9f]">2025</span>
                 </div>
-                <h3 className="text-2xl font-bold text-[#f3f4f6] mb-4 group-hover:text-[#a78bfa] transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-[#ffffff] mb-4 group-hover:text-[#28A745] transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-[#8e8e9f] leading-relaxed text-base mb-8">
+                <p className="text-[#8e8e9f] leading-relaxed text-base mb-6">
                   {project.description}
                 </p>
 

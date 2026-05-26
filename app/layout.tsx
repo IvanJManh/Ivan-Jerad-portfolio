@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Space_Mono, Plus_Jakarta_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { CustomCursor } from '@/components/custom-cursor'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -39,7 +40,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${_plusJakarta.className} antialiased bg-[#0a0a0c] text-[#f3f4f6]`}>
+      <body className={`${_plusJakarta.className} antialiased bg-[#000000] text-[#ffffff]`}>
+        <CustomCursor />
         {children}
         <Analytics />
       </body>
