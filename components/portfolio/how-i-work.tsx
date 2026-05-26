@@ -4,38 +4,36 @@ export function HowIWork() {
   const steps = portfolioContent.howIWork;
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-blue-50">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#F8F7F5]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-16 text-center">
+        <h2 className="text-4xl sm:text-5xl font-bold text-[#1A1A1A] mb-20 text-center">
           How I Work
         </h2>
 
         <div className="relative">
-          {/* Connection line */}
-          <div className="hidden md:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300"></div>
+          {/* Ultra-thin tracking line */}
+          <div className="hidden md:block absolute top-8 left-0 right-0 h-px bg-[#D4CFC6]"></div>
 
           {/* Steps grid */}
           <div className="grid md:grid-cols-4 gap-8">
             {steps.map((item, idx) => (
-              <div key={idx} className="relative">
-                {/* Step number circle */}
-                <div className="flex justify-center mb-6">
-                  <div className={`w-20 h-20 rounded-full flex items-center justify-center text-white font-bold text-2xl relative z-10 ${[
-                    'bg-blue-600',
-                    'bg-purple-600',
-                    'bg-pink-600',
-                    'bg-orange-600'
-                  ][idx]}`}>
-                    {item.step}
-                  </div>
+              <div key={idx} className="relative group">
+                {/* Step number badge - above the line */}
+                <div className="flex justify-start mb-12">
+                  <span className="section-number">
+                    0{idx + 1}
+                  </span>
                 </div>
 
+                {/* Subtle hover indicator on line */}
+                <div className="hidden md:block absolute top-0 left-0 -right-4 h-px bg-[#1E40AF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
                 {/* Step content */}
-                <div className="text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <div>
+                  <h3 className="text-xl font-bold text-[#1A1A1A] mb-4 group-hover:text-[#1E40AF] transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-gray-700 leading-relaxed text-sm">
+                  <p className="text-[#6B7280] leading-relaxed text-base">
                     {item.description}
                   </p>
                 </div>

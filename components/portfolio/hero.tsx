@@ -4,40 +4,39 @@ export function Hero() {
   const { headline, subheadline, intro, ctaButtons } = portfolioContent.hero;
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-blue-50 to-white px-4 sm:px-6 lg:px-8 pt-20">
-      <div className="max-w-4xl mx-auto text-center">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
-        </div>
+    <section className="relative min-h-screen flex items-center justify-center bg-[#F8F7F5] px-4 sm:px-6 lg:px-8 pt-20 overflow-hidden">
+      {/* Subtle background elements */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#1E40AF] rounded-full mix-blend-multiply filter blur-3xl opacity-5"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#6366F1] rounded-full mix-blend-multiply filter blur-3xl opacity-5"></div>
+      </div>
 
-        {/* Headline */}
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 text-balance">
+      <div className="max-w-5xl mx-auto text-center">
+        {/* Headline - Massive typography */}
+        <h1 className="text-7xl sm:text-8xl lg:text-9xl font-black text-[#1A1A1A] mb-6 text-balance leading-none">
           {headline}
         </h1>
 
         {/* Subheadline */}
-        <p className="text-2xl sm:text-3xl text-blue-600 font-semibold mb-6 text-balance">
+        <p className="text-xl sm:text-2xl text-[#6B7280] font-medium mb-8 text-balance max-w-3xl mx-auto">
           {subheadline}
         </p>
 
         {/* Intro */}
-        <p className="text-lg sm:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg text-[#6B7280] mb-12 max-w-2xl mx-auto leading-relaxed">
           {intro}
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
           {ctaButtons.map((btn, idx) => (
             <a
               key={idx}
               href={btn.href}
-              className={`px-8 py-4 rounded-lg font-semibold transition-all ${
+              className={`px-8 py-4 font-semibold transition-all duration-300 cubic-bezier(0.4, 0, 0.2, 1) rounded-xl ${
                 idx === 0
-                  ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'
-                  : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50'
+                  ? 'bg-[#1E40AF] text-white hover:bg-[#1a3487] shadow-sm hover:shadow-md hover:scale-105'
+                  : 'bg-transparent text-[#1E40AF] border-2 border-[#1E40AF] hover:bg-[#F3F1ED]'
               }`}
             >
               {btn.label}
@@ -46,8 +45,8 @@ export function Hero() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="mt-20 flex justify-center">
-          <svg className="w-6 h-6 text-gray-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="flex justify-center animate-bounce">
+          <svg className="w-6 h-6 text-[#1E40AF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>

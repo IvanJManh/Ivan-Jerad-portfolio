@@ -24,13 +24,13 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-purple-600">
+    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#1E40AF] via-[#1E40AF] to-[#6366F1]">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             {title}
           </h2>
-          <p className="text-lg text-blue-100">
+          <p className="text-lg text-white/80">
             {intro}
           </p>
         </div>
@@ -38,7 +38,7 @@ export function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact information */}
           <div className="space-y-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="glass-premium p-8">
               <h3 className="text-xl font-bold text-white mb-6">Get in Touch</h3>
               
               <div className="space-y-4">
@@ -153,7 +153,7 @@ export function Contact() {
                 ))}
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors mt-6"
+                  className="w-full bg-[#1E40AF] text-white font-semibold py-3 rounded-lg hover:bg-[#1a3487] transition-all duration-300 mt-6 hover:shadow-md hover:scale-105"
                 >
                   Send Message
                 </button>
