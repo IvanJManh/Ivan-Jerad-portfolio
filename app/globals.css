@@ -137,6 +137,7 @@ body {
   background-color: var(--bg-obsidian);
   color: var(--text-pure);
   overflow-x: hidden;
+  padding-top: 36px;
 }
 
 /* Custom Magnetic Cursor */
@@ -548,6 +549,52 @@ body {
     }
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+  /* Luxury Marquee Ribbon */
+  .marquee-ribbon-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    background-color: var(--bg-obsidian);
+    border-bottom: 1px solid rgba(40, 167, 69, 0.3);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 10000;
+  }
+
+  .marquee-track {
+    display: flex;
+    white-space: nowrap;
+    gap: 2rem;
+    padding-left: 2rem;
+    animation: marqueeStream 25s linear infinite;
+  }
+
+  .marquee-track span {
+    font-family: 'Inter', monospace, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  .marquee-track .dot {
+    color: var(--accent-lime);
+    text-shadow: 0 0 8px var(--accent-lime);
+  }
+
+  @keyframes marqueeStream {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
     }
   }
 }

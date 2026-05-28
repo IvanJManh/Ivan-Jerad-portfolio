@@ -42,6 +42,27 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${_plusJakarta.className} antialiased bg-[#000000] text-[#ffffff]`}>
         <CustomCursor />
+        <div className="marquee-ribbon-wrapper">
+          <div className="marquee-track">
+            <span>PRODUCT BUILDER</span>
+            <span className="dot">•</span>
+            <span>FULL-STACK DEVELOPMENT</span>
+            <span className="dot">•</span>
+            <span>UI/UX BLUEPRINTS</span>
+            <span className="dot">•</span>
+            <span>SYSTEM INTEGRITY VALIDATION</span>
+            <span className="dot">•</span>
+            
+            <span>PRODUCT BUILDER</span>
+            <span className="dot">•</span>
+            <span>FULL-STACK DEVELOPMENT</span>
+            <span className="dot">•</span>
+            <span>UI/UX BLUEPRINTS</span>
+            <span className="dot">•</span>
+            <span>SYSTEM INTEGRITY VALIDATION</span>
+            <span className="dot">•</span>
+          </div>
+        </div>
         {children}
         <Analytics />
       </body>
