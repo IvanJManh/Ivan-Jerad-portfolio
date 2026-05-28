@@ -1,11 +1,10 @@
 import { portfolioContent } from '@/lib/portfolio-content';
-import { SpotlightReveal } from '@/components/spotlight-reveal';
 
 export function Skills() {
   const { groups, frontendStack, tools, softSkills } = portfolioContent.skillsAndTech;
 
   return (
-    <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#000000]">
+    <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0c]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl sm:text-5xl font-bold text-[#f3f4f6] mb-20 text-center">
           Skills & Technologies
@@ -35,10 +34,9 @@ export function Skills() {
           ))}
         </div>
 
-        {/* Quick reference bento sections with spotlight reveal */}
+        {/* Quick reference bento sections */}
         <div className="grid md:grid-cols-3 gap-6">
-          <SpotlightReveal className="h-auto">
-            <div>
+          <div className="bento-card">
             <div className="section-number mb-4">TECH</div>
             <h4 className="text-lg font-bold text-[#f3f4f6] mb-6">
               Frontend Stack
@@ -46,16 +44,14 @@ export function Skills() {
             <div className="space-y-3">
               {frontendStack.map((tech, idx) => (
                 <div key={idx} className="text-[#8e8e9f] flex items-start gap-3">
-                  <span className="text-[#28A745] font-bold mt-0.5">•</span>
+                  <span className="text-[#6366F1] font-bold mt-0.5">•</span>
                   <span>{tech}</span>
                 </div>
               ))}
             </div>
-            </div>
-          </SpotlightReveal>
+          </div>
 
-          <SpotlightReveal className="h-auto">
-            <div>
+          <div className="bento-card">
             <div className="section-number mb-4">TOOLS</div>
             <h4 className="text-lg font-bold text-[#f3f4f6] mb-6">
               Development Tools
@@ -63,16 +59,14 @@ export function Skills() {
             <div className="space-y-3">
               {tools.map((tool, idx) => (
                 <div key={idx} className="text-[#8e8e9f] flex items-start gap-3">
-                  <span className="text-[#28A745] font-bold mt-0.5">•</span>
+                  <span className="text-[#6366F1] font-bold mt-0.5">•</span>
                   <span>{tool}</span>
                 </div>
               ))}
             </div>
-            </div>
-          </SpotlightReveal>
+          </div>
 
-          <SpotlightReveal className="h-auto">
-            <div>
+          <div className="bento-card">
             <div className="section-number mb-4">SOFT</div>
             <h4 className="text-lg font-bold text-[#f3f4f6] mb-6">
               Core Competencies
@@ -80,13 +74,12 @@ export function Skills() {
             <div className="space-y-3">
               {softSkills.map((skill, idx) => (
                 <div key={idx} className="text-[#8e8e9f] flex items-start gap-3">
-                  <span className="text-[#28A745] font-bold mt-0.5">•</span>
+                  <span className="text-[#6366F1] font-bold mt-0.5">•</span>
                   <span>{skill}</span>
                 </div>
               ))}
             </div>
-            </div>
-          </SpotlightReveal>
+          </div>
         </div>
       </div>
     </section>
