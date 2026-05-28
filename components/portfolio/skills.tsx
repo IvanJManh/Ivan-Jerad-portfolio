@@ -1,86 +1,83 @@
+'use client';
+
+import { useEffect } from 'react';
 import { portfolioContent } from '@/lib/portfolio-content';
 
 export function Skills() {
-  const { groups, frontendStack, tools, softSkills } = portfolioContent.skillsAndTech;
+  const { groups } = portfolioContent.skillsAndTech;
+
+  useEffect(() => {
+    const bentoCards = document.querySelectorAll('.bento-skill-card');
+
+    bentoCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e as MouseEvent).clientX - rect.left;
+        const y = (e as MouseEvent).clientY - rect.top;
+        
+        (card as HTMLElement).style.setProperty('--mouse-x', `${x}px`);
+        (card as HTMLElement).style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+  }, []);
+
+  const skillData = [
+    {
+      id: 1,
+      meta: '01 / INTERFACE ENGINE',
+      title: 'Frontend & Interaction Design',
+      description: 'Building high-performance, dynamic user interfaces with fluid animations and responsive, mobile-first component logic.',
+      skills: ['React.js', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'JavaScript (ES6+)', 'HTML5 & CSS3'],
+      span: true
+    },
+    {
+      id: 2,
+      meta: '02 / CORE RUNTIME',
+      title: 'Backend & Logic',
+      description: 'Architecting client-server interactions, data systems, and structured algorithms.',
+      skills: ['Java', 'Python', 'REST APIs', 'Node.js', 'OOP']
+    },
+    {
+      id: 3,
+      meta: '03 / PRODUCT BLUEPRINT',
+      title: 'Discovery & UI/UX',
+      description: 'Mapping stakeholder logic, prototyping complex design systems, and analyzing target metrics.',
+      skills: ['Figma', 'HCI Concepts', 'Wireframing', 'Design Thinking']
+    },
+    {
+      id: 4,
+      meta: '04 / ECOSYSTEM INTEGRITY',
+      title: 'Validation & Delivery Workflows',
+      description: 'Safeguarding applications through secure form validations, usability testing, cross-device responsiveness verification, and agile cycle management.',
+      skills: ['Firebase', 'Database Design', 'Git / GitHub', 'Incremental SDLC', 'ClickUp', 'UI Verification'],
+      span: true
+    }
+  ];
 
   return (
-    <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0c]">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-[#f3f4f6] mb-20 text-center">
-          Skills & Technologies
-        </h2>
+    <section className="skills-bento-container bg-[#000000]">
+      <div className="skills-header">
+        <span className="section-tag">// PRODUCT LIFECYCLE CAPABILITIES</span>
+        <h2>The Tech Stack & Toolkit</h2>
+      </div>
 
-        {/* Asymmetrical bento grid for skill groups */}
-        <div className="grid md:grid-cols-3 gap-6 mb-20">
-          {groups.map((group, idx) => (
-            <div
-              key={idx}
-              className={`bento-card ${idx === 0 ? 'md:col-span-2' : ''} ${idx === 2 ? 'md:col-span-2' : ''}`}
-            >
-              <div className="section-number mb-4">
-                SKILL {String(idx + 1).padStart(2, '0')}
-              </div>
-              <h3 className="text-2xl font-bold text-[#f3f4f6] mb-6">
-                {group.title}
-              </h3>
-              <div className="tag-cloud">
-                {group.skills.map((skill, sidx) => (
-                  <span key={sidx}>
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Quick reference bento sections */}
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bento-card">
-            <div className="section-number mb-4">TECH</div>
-            <h4 className="text-lg font-bold text-[#f3f4f6] mb-6">
-              Frontend Stack
-            </h4>
-            <div className="space-y-3">
-              {frontendStack.map((tech, idx) => (
-                <div key={idx} className="text-[#8e8e9f] flex items-start gap-3">
-                  <span className="text-[#6366F1] font-bold mt-0.5">•</span>
-                  <span>{tech}</span>
-                </div>
+      <div className="bento-grid-layout">
+        {skillData.map((skill) => (
+          <div 
+            key={skill.id} 
+            className={`bento-skill-card ${skill.span ? 'span-2' : ''}`}
+          >
+            <div className="card-glow-effect"></div>
+            <div className="card-meta">{skill.meta}</div>
+            <h3>{skill.title}</h3>
+            <p>{skill.description}</p>
+            <div className="tech-pill-container">
+              {skill.skills.map((tech, idx) => (
+                <span key={idx} className="tech-pill">{tech}</span>
               ))}
             </div>
           </div>
-
-          <div className="bento-card">
-            <div className="section-number mb-4">TOOLS</div>
-            <h4 className="text-lg font-bold text-[#f3f4f6] mb-6">
-              Development Tools
-            </h4>
-            <div className="space-y-3">
-              {tools.map((tool, idx) => (
-                <div key={idx} className="text-[#8e8e9f] flex items-start gap-3">
-                  <span className="text-[#6366F1] font-bold mt-0.5">•</span>
-                  <span>{tool}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bento-card">
-            <div className="section-number mb-4">SOFT</div>
-            <h4 className="text-lg font-bold text-[#f3f4f6] mb-6">
-              Core Competencies
-            </h4>
-            <div className="space-y-3">
-              {softSkills.map((skill, idx) => (
-                <div key={idx} className="text-[#8e8e9f] flex items-start gap-3">
-                  <span className="text-[#6366F1] font-bold mt-0.5">•</span>
-                  <span>{skill}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

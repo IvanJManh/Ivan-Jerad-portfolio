@@ -734,4 +734,155 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  /* Premium Interactive Bento Grid Skills Section */
+  .skills-bento-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 24px;
+  }
+
+  .skills-header {
+    margin-bottom: 48px;
+  }
+
+  .skills-header .section-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--accent-lime);
+    display: block;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  .skills-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text-pure);
+  }
+
+  /* Structural Bento Grid Setup */
+  .bento-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .bento-grid-layout {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .span-2 {
+      grid-column: span 2;
+    }
+  }
+
+  /* High-End Glassmorphism Bento Card Container */
+  .bento-skill-card {
+    position: relative;
+    background: var(--bg-card-dark);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    min-height: 300px;
+  }
+
+  /* Ambient Radial Hover Light Layer */
+  .card-glow-effect {
+    position: absolute;
+    top: var(--mouse-y, 0px);
+    left: var(--mouse-x, 0px);
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(40, 167, 69, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .bento-skill-card:hover .card-glow-effect {
+    opacity: 1;
+  }
+
+  .bento-skill-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(40, 167, 69, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Content Typography Layouts */
+  .card-meta {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--accent-lime);
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    z-index: 2;
+    position: relative;
+  }
+
+  .bento-skill-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-pure);
+    z-index: 2;
+    position: relative;
+  }
+
+  .bento-skill-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted-gray);
+    margin-bottom: 32px;
+    z-index: 2;
+    position: relative;
+  }
+
+  /* Premium Dynamic Interactive Tech Capsules */
+  .tech-pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .tech-pill {
+    font-size: 0.78rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #e4e4e7;
+    padding: 6px 16px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  /* When the parent bento block is hovered, make internal capsules illuminate */
+  .bento-skill-card:hover .tech-pill {
+    background: rgba(40, 167, 69, 0.03);
+    border-color: rgba(40, 167, 69, 0.15);
+    color: var(--text-pure);
+  }
+
+  /* Target standalone capsule hover reactions */
+  .tech-pill:hover {
+    background: var(--accent-lime) !important;
+    color: #000000 !important;
+    border-color: var(--accent-lime) !important;
+    transform: scale(1.05);
+  }
 }
