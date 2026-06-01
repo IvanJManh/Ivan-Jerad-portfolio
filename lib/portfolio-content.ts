@@ -48,7 +48,7 @@ export const portfolioContent = {
       category: "AI-Powered Communications Coach",
       description: `I led the requirement gathering and user flow definition for this AI-powered communications coaching application. I collaboratively planned the AI feedback feature architecture while conducting usability testing to validate the user experience. Using ClickUp for agile coordination, I ensured alignment between the product vision and technical implementation, testing edge cases in the feedback logic to ensure accuracy and usability.`,
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
-      liveUrl: "https://https://skillo.it.com",
+      liveUrl: "https://skillo.it.com",
       githubUrl: "https://github.com/IvanJManh/skillo-web..git"
     },
     {
