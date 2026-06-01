@@ -5,7 +5,7 @@ export const portfolioContent = {
     intro: "I build products from concept to deployment—planning user experiences, designing interfaces, developing solutions, and validating usability at every step.",
     ctaButtons: [
       { label: "View Projects", href: "#projects" },
-      { label: "Download CV", href: "/cv.pdf" }
+      { label: "Download CV", href: "https://drive.google.com/uc?export=download&id=1oDFuhWclfZ035yPj2LvQc8lZwCEYF26-" }
     ]
   },
 
